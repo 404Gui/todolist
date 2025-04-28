@@ -1,0 +1,48 @@
+.checkboxContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 600px;
+    width: 90%;
+    border-bottom: 1px solid #333;
+    
+    box-sizing: border-box;
+}
+
+    .checkboxContainer p {
+        flex: 1;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .checkboxContainer .checkbox{
+        color: #6C63FF
+    }
+
+.riscado {
+    text-decoration: line-through;
+}
+
+.buttonsEditDelete button {
+    background: transparent;
+    color: grey;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonsEditDelete button:hover {
+    color: #6C63FF;
+}
+
+
+@media (max-width: 480px) {
+
+    .buttonsEditDelete {
+        align-items: center;
+    }
+}
+    

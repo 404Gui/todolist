@@ -1,0 +1,9 @@
+.addButton {
+    position: fixed;
+    bottom: 20px;
+    right: 240px; 
+    cursor: pointer;
+    color: #6C63FF;
+    text-align: center;
+    z-index: 1000;
+}

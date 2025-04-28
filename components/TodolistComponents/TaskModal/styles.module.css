@@ -1,0 +1,20 @@
+.modalTitle {
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.modalTitleDarkTheme {
+    color: #F7F7F7;
+}
+
+.closeAddButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonCloseModal {
+    background-color: transparent;
+    border: 1px solid #6C63FF;
+    color: #6C63FF;
+}

@@ -1,0 +1,32 @@
+.addButton {
+    position: fixed;
+    bottom: 20px;
+    right: 240px; 
+    cursor: pointer;
+    color: #6C63FF;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+@media (max-width: 868px) {
+   
+    .addButton {
+        top: 20px;
+        left: 10px;      
+        right: unset;
+        bottom: unset;       
+    }
+}
+
+@media (max-width: 480px) {  
+
+    .addButton {
+        margin: 5% auto 0 auto;
+        text-align: center;
+    }
+
+    .buttonsEditDelete {
+        align-items: center;
+    }
+}
