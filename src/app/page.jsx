@@ -1,13 +1,13 @@
 'use client'
 import styles from "./styles.module.css";
 import { useState, useEffect } from 'react';
-import Header from "@/components/TodolistComponents/Header/Header";
-import SearchBar from "@/components/TodolistComponents/SearchBar/SearchBar";
-import FilterSelect from "@/components/TodolistComponents/FilterSelect/FilterSelect";
-import ThemeToggle from "@/components/TodolistComponents/ThemeToggle/ThemeToggle";
-import TaskList from "@/components/TodolistComponents/TaskList/TaskList";
-import AddTaskButton from "@/components/TodolistComponents/AddTaskButton/AddTaskButton";
-import TaskModal from "@/components/TodolistComponents/TaskModal/TaskModal";
+import Header from "../../components/TodolistComponents/Header/Header";
+import SearchBar from "../../components/TodolistComponents/SearchBar/SearchBar";
+import FilterSelect from "../../components/TodolistComponents/FilterSelect/FilterSelect";
+import ThemeToggle from "../../components/TodolistComponents/ThemeToggle/ThemeToggle";
+import TaskList from "../../components/TodolistComponents/TaskList/TaskList";
+import AddTaskButton from "../../components/TodolistComponents/AddTaskButton/AddTaskButton";
+import TaskModal from "../../components/TodolistComponents/TaskModal/TaskModal";
 
 export default function Board() {
   const [dark, setDark] = useState(false);
@@ -83,17 +83,24 @@ export default function Board() {
 
   const handleAddItem = () => {
     if (inputValue.trim()) {
-      const newItem = { text: inputValue, checked: false };
+      const newItem = {
+        id: Date.now() + Math.random(),
+        text: inputValue,
+        checked: false
+      };
+      
       setItems([...items, newItem]);
       setInputValue('');
     }
   };
 
-  const handleChangeChbk = (index) => {
-    const updatedItems = [...items];
-    updatedItems[index].checked = !updatedItems[index].checked;
+  const handleChangeChbk = (id) => {
+    const updatedItems = items.map(item =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
     setItems(updatedItems);
   };
+  
   
 
   const handleDeleteItem = (index) => {

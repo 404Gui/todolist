@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    min-height: 100vh;
+  }
+  
+
+.lightTheme {
+    color: black;
+    background: #F7F7F7;
+          
+}
+
+.darkTheme {
+    color: #F7F7F7;
+    background: #1E1E1E;
+}
+
+.wrapper h3 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.searchContent {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}

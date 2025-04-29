@@ -1,6 +1,6 @@
 import styles from "./styles.module.css"
 
-import Vazio from "@/components/Empty/empty";
+import Vazio from "../Empty/empty";
 import TaskItem from "../TaskItem/TaskItem";
 
 export default function TaskList({ filteredItems, dark, handleChangeChbk, handleEditItem, handleDeleteItem }) {
@@ -14,7 +14,7 @@ export default function TaskList({ filteredItems, dark, handleChangeChbk, handle
               item={item}
               index={index}
               dark={dark}
-              handleChangeChbk={handleChangeChbk}
+              handleChangeChbk={() => handleChangeChbk(item.id)}
               handleEditItem={handleEditItem}
               handleDeleteItem={handleDeleteItem}
             />
